@@ -56,4 +56,5 @@ function Inputbox({
     )
 }
 
-export default InputBox
+//iss se bhi export hojayega but ek better way ha export krne ka generally hum voh bade projects ke liye use krte ha 
+export default Inputbox
