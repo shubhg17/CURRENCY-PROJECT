@@ -19,7 +19,7 @@ function useCurrencyInfo(currency) {
        // isme callback jata ha .then() me
        // iss se mera data json format me convert hogya ha and abh mein issko hume hold krna padega varibale me hold nhi krskte kyuki voh UI me kabhi update nhi hoga so hum useState hook ka istamal krenge 
        .then((res)=>res.json())
-       // joh hum api call me currency me pass krenge {currency} vohi humari key value ayegi eg inr then inr usd then usd aur har baari ek object ko access krne ke liye hume . use krna jurat nhi hum square bracket bhi use krskte ha []
+       // joh hum api call me currency me pass krenge {currency} vohi humari key value ayegi eg inr then inr usd then usd        aur har baari ek object ko access krne ke liye hume . use krna jurat nhi hum square bracket bhi use krskte ha []
        .then((res) => setData(res[currency])) //iss se mene joh bhi value di ha url me uss se me uski value le lunga 
        console.log(data)
        //abh final useEffect me joh tumhara fetchAPI ha usse kabh call krvaoge jabh currency me change hoga 
