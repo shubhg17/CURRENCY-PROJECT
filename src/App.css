@@ -3,3 +3,32 @@
    font-family:Arial,Roboto;
    background-color:orange;
 }
+
+.outerdiv {
+    height:500px;
+    width:500px;
+    background-color:#212121;
+    border-radius:20px;
+}
+
+.innerdiv {
+   height:200px;
+   width:200px;
+   background-color:rgb(124, 121, 121);
+}
+
+.inner2div {
+   height:200px;
+   width:200px;
+   background-color:rgb(124, 121, 121);
+}
+
+.firstbar {
+   font-size:20px;
+   border-radius:5px;
+   border-width:1px;
+}
+
+.para {
+    font-size:20px;
+}

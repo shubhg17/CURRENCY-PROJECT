@@ -5,8 +5,18 @@ function App() {
 
   return (
     <>
-      <h1 className="heading">Currency App with Chai</h1>
-      <Inputbox/>
+      <div className="main-container">
+         <div className="card">
+          {/* //From currency box */}
+           <Inputbox label="From"/>
+           {/* //Swap button */}
+           <button className="swap-button">Swap</button>
+           {/* //To currency box */}
+           <Inputbox label="To"/>
+           {/* //convert button */}
+           <button className="convertbutton">Convert</button>
+         </div>
+      </div>
     </>
   )
 }

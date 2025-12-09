@@ -24,7 +24,7 @@ function Inputbox({
    className = "",
 }) {
     return (
-      <div className="outerdiv">
+      <div className={`outerdiv ${className}`}>
         <div className="innerdiv">
            <label className="labelClass">
                 {label}
@@ -51,6 +51,7 @@ function Inputbox({
         </div>
         <div className="inner2div">
           <p className="para">Currency Type</p>
+
 {/* 
         // select HTML ka element ha basically yeh ek dropdown hota ha 
          //<select>
