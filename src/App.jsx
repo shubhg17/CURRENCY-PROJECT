@@ -10,11 +10,15 @@ function App() {
           {/* //From currency box */}
            <Inputbox label="From"/>
            {/* //Swap button */}
+           <div className="bt-container">
            <button className="swap-button">Swap</button>
+           </div>
            {/* //To currency box */}
            <Inputbox label="To"/>
            {/* //convert button */}
+           <div className="bt-container">
            <button className="convertbutton">Convert</button>
+           </div>
          </div>
       </div>
     </>

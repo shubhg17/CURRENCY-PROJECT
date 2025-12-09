@@ -1,34 +1,85 @@
-.heading {
-   text-align:center;
-   font-family:Arial,Roboto;
-   background-color:orange;
+
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* /// uses full screen height */
+    min-height:100vh; 
+    background:#dde1e7;
 }
 
 .outerdiv {
-    height:500px;
-    width:500px;
-    background-color:#212121;
-    border-radius:20px;
+    background:white;
+    width:450px;
+    padding:18px;
+    border-radius:12px;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction:column;
+    gap:16px;
 }
 
 .innerdiv {
-   height:200px;
-   width:200px;
-   background-color:rgb(124, 121, 121);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .inner2div {
-   height:200px;
-   width:200px;
-   background-color:rgb(124, 121, 121);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.firstbar {
-   font-size:20px;
-   border-radius:5px;
-   border-width:1px;
+.labelClass {
+    font-size:16px;
+    font-weight:bold;
+    color:black;
 }
 
 .para {
-    font-size:20px;
+   font-size:16px;
+   font-weight:bold;
+   color:black;
+}
+
+.firstbar {
+   font-size:15px;
+   border-radius:5px;
+   border-style:solid;
+   border-color:black;
+   padding:10px;
+}
+
+.selectclass {
+    padding-left:30px;
+    padding-top:10px;
+    padding-right:10px;
+    font-size:15px;
+    border-radius:10px;
+    background:white;
+    color:black;
+}
+
+.bt-container {
+    display:flex;
+    justify-content:center;
+}
+
+.swap-button { 
+   color:white;
+   background-color:rgb(52, 121, 204);
+   border:none;
+   padding:15px;
+   font-size:16px;
+   border-radius:10px;
+}
+
+.convertbutton {
+    color:white;
+    background-color:rgb(52, 121, 204);
+    border:none;
+    padding:15px;
+    font-size:16px;
+    border-radius:10px;
 }
