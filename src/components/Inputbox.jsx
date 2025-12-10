@@ -1,4 +1,7 @@
-import React from  "react"
+import React, { useId } from "react";
+
+//useId hook : useId is a react hook for generating unique ID's that can be passed to accessibility attributes yeh attributes kya hote ha har html ke andar accessibility attributes hote ha jis se user tab tab krke kuch access krna chaiye toh vaha se leskta ha lekin uski mapping kayi baari difficult ho jati h ki kis user ke sath 
+//do not call useId to generate keys in a list Keys should be generated from your data
 
 //yeh function inputbox wala apse abhi do input le rha ha ek label aur classname classname nhi ha toh abhi default de diya amount bhi lenge and aur bhi cheeze 
 
@@ -23,13 +26,21 @@ function Inputbox({
    currencyDisable=false,
    className = "",
 }) {
+
+  //ek unique value dega yeh yeh use kro ya nah kro tumhare upar ha to learn a new hook we used this
+   const amountInputId = useId()
+
     return (
       <div className={`outerdiv ${className}`}>
         <div className="innerdiv">
-           <label className="labelClass">
+
+       {/* // yaha pe hum uss value ko bind krdenge joh ayegi useId hook se aur jese label me for hota ha idhar hum htmlFor use krte ha as for ek reserved keyword ha isliye for use nhi krenge
+       // label bhi unique ke liye use hota ha  */}
+           <label htmlFor={amountInputId} className="labelClass">
                 {label}
            </label>
            <input
+             id={amountInputId} //input me bhi humne use bind kradiya joh unique value ayegi 
              className="firstbar"
              type="number"
              placeholder="Amount"
@@ -40,43 +51,18 @@ function Inputbox({
              disabled={amountDisable} 
              value={amount}
              //yaha tk theek ha but jabh mera amount change hoga toh me yaha ek onChange event use krunga as har input box pe onChange lagaskte ha
-            
-            //Fires when the value of an input changes AND the element loses focus mtlb jabh hum jaha likh rhe ha mtlb input box ke bhar jab tk  click nhi krenge voh mtlb ha elment loses focus tbh tk onchange fire nhi hoga  (onchange)
-            //Fires immediately when you click an element.
-
-             // iss se tumne ek event fire kiya aur iss se ek method call krskte ha but konsa method call kru voh humne de rkha ha onAmountChange input field me upar function me but yeh crash krskta ha as tumne input field me koi default value pass nhi kr rkhi isliye ek check krenge hum kar bhi nhi skte as function ha here && tbh hoga ki agar yeh available ha onAmountChange wala method toh isko usse krenge  
-             //Javascript onChange me value string format me le liti ha toh use number me convert krdenge 
              onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
            />
         </div>
         <div className="inner2div">
           <p className="para">Currency Type</p>
 
-{/* 
-        // select HTML ka element ha basically yeh ek dropdown hota ha 
-         //<select>
-             <option value="usd">USD</option>
-             <option value="inr">INR</option>
-         </select>
-         //user ek value choose krega in options me 
-
-         // Option dropdown ke andar ek ek choice hoti ha example:  <option value="usd">usd</option> iska matlab user ko "usd" dikhega  if user selects value then usd milega
-
-         // .map() is used agar 2-3 currencys ho toh manually likh skte ho <option>usd</option>
-<option>inr</option>
-<option>eur</option> but jab APi se 10 -20 currencies ajyengi toh manually nhi likhskte  isliye loop lagate hain using .map()    and  
- : Map krta kya ha  : array ke har element ko leta ha uske liye ek <option> banata h and returns it .map() = list ko loop karke har element ke liye option bana deta hai
-*/}
-
           <select 
           className="selectclass" 
           value={selectCurrency}
-          // idhar humne number me convert nhi kiya as usd yeh sab string me ayega baki same as amount wala method
-        onChange={(e)=>onCurrencyChange && onCurrencyChange(e.target.value)}
-           disabled={currencyDisable}
-           >
-              
-
+          onChange={(e)=>onCurrencyChange && onCurrencyChange(e.target.value)}
+          disabled={currencyDisable}
+          >
               {/* //loop lagane ke liye hum yaha map ka use kr rhe ha  */}
               {currencyOptions.map((currency)=>(
                 //jabh bhi loop lagayenge ap jsx me ek key paas krni padegi ki agar apko performance lani ha loop me elements ko repeat krne ke liye toh apko key pass krni hi chaiye as performance increase kr ske chl jayega but performance bhot degrade hojati ha 

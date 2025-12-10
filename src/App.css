@@ -1,85 +1,85 @@
-
-body {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    /* /// uses full screen height */
-    min-height:100vh; 
-    background:#dde1e7;
+/* Main container centers everything */
+.main-container {
+width: 100%;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+/* Default plain background — you can replace with image if you want */
+background-color: #f2f2f2;
 }
 
+/* Card wrapper */
+.card {
+width: 90%;
+max-width: 400px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputbox outer container */
 .outerdiv {
-    background:white;
-    width:450px;
-    padding:18px;
-    border-radius:12px;
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.5);
-    display:flex;
-    flex-direction:column;
-    gap:16px;
+width: 100%;
+margin-bottom: 15px;
 }
 
 .innerdiv {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.inner2div {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
 }
 
 .labelClass {
-    font-size:16px;
-    font-weight:bold;
-    color:black;
-}
-
-.para {
-   font-size:16px;
-   font-weight:bold;
-   color:black;
+font-size: 14px;
+font-weight: 600;
+margin-bottom: 5px;
 }
 
 .firstbar {
-   font-size:15px;
-   border-radius:5px;
-   border-style:solid;
-   border-color:black;
-   padding:10px;
+width: 100%;
+padding: 10px;
+border: 1px solid gray;
+border-radius: 6px;
+outline: none;
+font-size: 14px;
 }
 
+/* select box */
 .selectclass {
-    padding-left:30px;
-    padding-top:10px;
-    padding-right:10px;
-    font-size:15px;
-    border-radius:10px;
-    background:white;
-    color:black;
+width: 100%;
+padding: 10px;
+border-radius: 6px;
+border: 1px solid gray;
+font-size: 14px;
+outline: none;
 }
 
 .bt-container {
-    display:flex;
-    justify-content:center;
+margin: 10px 0;
+display: flex;
+justify-content: center;
 }
 
-.swap-button { 
-   color:white;
-   background-color:rgb(52, 121, 204);
-   border:none;
-   padding:15px;
-   font-size:16px;
-   border-radius:10px;
-}
-
+.swap-button,
 .convertbutton {
-    color:white;
-    background-color:rgb(52, 121, 204);
-    border:none;
-    padding:15px;
-    font-size:16px;
-    border-radius:10px;
+padding: 10px 20px;
+border-radius: 6px;
+border: none;
+background-color: #4caf50;
+color: white;
+cursor: pointer;
+font-weight: 600;
 }
+
+.swap-button:hover,
+.convertbutton:hover {
+background-color: #45a049;
+}
+
+
+
